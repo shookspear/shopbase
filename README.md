@@ -10,6 +10,7 @@ Backend for an e-commerce website
 * MySQL
 
 ## Walk Through Video
-Part 1: https://drive.google.com/file/d/1v150qRAV-6aeVd1y34AuuGM3gT9VqUAv/view
+Part 1: https://drive.google.com/file/d/1tqV2GcixZwvGfSl-Ff1859e4NsfbacYf/view (GET, POST routes)
+Part 2: (PUT, DELETE routes)
 
 ### ©️2022 Echeta Okeke
