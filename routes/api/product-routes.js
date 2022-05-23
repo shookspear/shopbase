@@ -13,7 +13,6 @@ router.get('/', (req, res) => {
       'price',
       'stock'
     ],
-    order: [['created_at', 'DESC']],
     include: [
       {
         model: Category,
@@ -21,7 +20,11 @@ router.get('/', (req, res) => {
       },
       {
         model: Tag,
-        attributes: ['id', 'tag_name']
+        attributes: ['id', 'tag_name'],
+        through: {
+          model: ProductTag,
+          attributes: []},
+          as: 'product_tags',
       }
     ]
   })
@@ -46,7 +49,6 @@ Product.findOne({
     'price',
     'stock'
   ],
-  order: [['created_at', 'DESC']],
   include: [
     {
       model: Category,
@@ -54,7 +56,11 @@ Product.findOne({
     },
     {
       model: Tag,
-      attributes: ['id', 'tag_name']
+      attributes: ['id', 'tag_name'],
+      through: {
+        model: ProductTag,
+        attributes: []},
+        as: 'product_tags',
     }
   ]
 })

@@ -7,6 +7,7 @@ router.get('/', (req, res) => {
   // find all categories
   Category.findAll({
     attributes: [
+      'id',
       'category_name'
     ],
     include: [
@@ -84,7 +85,7 @@ router.put('/:id', (req, res) => {
         res.status(404).json({ message: 'No category found with this id' });
         return;
       }
-      res.json(dbCatgeoryData);
+      res.json(dbCategoryData);
     })
     .catch(err => {
       console.log(err);
